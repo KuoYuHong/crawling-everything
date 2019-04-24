@@ -1,0 +1,89 @@
+library("rvest")
+
+ai <- read_html("http://localhost/tibame_ai.html")
+ai_classname <- html_nodes(ai, ".card-title") %>% html_text()
+ai_classprice <- html_nodes(ai, ".current-price___2Zu51") %>% html_text()
+ai_numofpeople <- html_nodes(ai, ".footer___2mND7 div:first-child span:first-child") %>% html_text()
+ai_classlen <- html_nodes(ai, ".footer___2mND7 div:first-child span:nth-child(2)") %>% html_text()
+
+ai_classname
+ai_classprice
+ai_numofpeople
+ai_classlen
+
+blockchain <- read_html("http://localhost/tibame_blockchain.html")
+blockchain_classname <- html_nodes(blockchain, ".card-title") %>% html_text()
+blockchain_classprice <- html_nodes(blockchain, ".current-price___2Zu51") %>% html_text()
+blockchain_numofpeople <- html_nodes(blockchain, ".footer___2mND7 div:first-child span:first-child") %>% html_text()
+blockchain_classlen <- html_nodes(blockchain, ".footer___2mND7 div:first-child span:nth-child(2)") %>% html_text()
+
+blockchain_classname
+blockchain_classprice
+blockchain_numofpeople
+blockchain_classlen
+
+e_commerce <- read_html("http://localhost/tibame_e_commerce.html")
+e_commerce_classname <- html_nodes(e_commerce, ".card-title") %>% html_text()
+e_commerce_classprice <- html_nodes(e_commerce, ".current-price___2Zu51") %>% html_text()
+e_commerce_numofpeople <- html_nodes(e_commerce, ".footer___2mND7 div:first-child span:first-child") %>% html_text()
+e_commerce_classlen <- html_nodes(e_commerce, ".footer___2mND7 div:first-child span:nth-child(2)") %>% html_text()
+
+e_commerce_classname
+e_commerce_classprice
+e_commerce_numofpeople
+e_commerce_classlen
+
+game_design <- read_html("http://localhost/tibame_game_design.html")
+game_design_classname <- html_nodes(game_design, ".card-title") %>% html_text()
+game_design_classprice <- html_nodes(game_design, ".current-price___2Zu51") %>% html_text()
+game_design_numofpeople <- html_nodes(game_design, ".footer___2mND7 div:first-child span:first-child") %>% html_text()
+game_design_classlen <- html_nodes(game_design, ".footer___2mND7 div:first-child span:nth-child(2)") %>% html_text()
+
+game_design_classname
+game_design_classprice
+game_design_numofpeople
+game_design_classlen
+
+digital_workforce <- read_html("http://localhost/tibame_digital_workforce.html")
+digital_workforce_classname <- html_nodes(digital_workforce, ".card-title") %>% html_text()
+digital_workforce_classprice <- html_nodes(digital_workforce, ".current-price___2Zu51") %>% html_text()
+digital_workforce_numofpeople <- html_nodes(digital_workforce, ".footer___2mND7 div:first-child span:first-child") %>% html_text()
+digital_workforce_classlen <- html_nodes(digital_workforce, ".footer___2mND7 div:first-child span:nth-child(2)") %>% html_text()
+
+digital_workforce_classname
+digital_workforce_classprice
+digital_workforce_numofpeople
+digital_workforce_classlen
+
+cloud_computing <- read_html("http://localhost/tibame_cloud_computing.html")
+cloud_computing_classname <- html_nodes(cloud_computing, ".card-title") %>% html_text()
+cloud_computing_classprice <- html_nodes(cloud_computing, ".current-price___2Zu51") %>% html_text()
+cloud_computing_numofpeople <- html_nodes(cloud_computing, ".footer___2mND7 div:first-child span:first-child") %>% html_text()
+cloud_computing_classlen <- html_nodes(cloud_computing, ".footer___2mND7 div:first-child span:nth-child(2)") %>% html_text()
+
+cloud_computing_classname
+cloud_computing_classprice
+cloud_computing_numofpeople
+cloud_computing_classlen
+
+mobile_apps <- read_html("http://localhost/tibame_mobile_apps.html")
+mobile_apps_classname <- html_nodes(mobile_apps, ".card-title") %>% html_text()
+mobile_apps_classprice <- html_nodes(mobile_apps, ".current-price___2Zu51") %>% html_text()
+mobile_apps_numofpeople <- html_nodes(mobile_apps, ".footer___2mND7 div:first-child span:first-child") %>% html_text()
+mobile_apps_classlen <- html_nodes(mobile_apps, ".footer___2mND7 div:first-child span:nth-child(2)") %>% html_text()
+
+mobile_apps_classname
+mobile_apps_classprice
+mobile_apps_numofpeople
+mobile_apps_classlen
+
+iot <- read_html("http://localhost/tibame_iot.html")
+iot_classname <- html_nodes(iot, ".card-title") %>% html_text()
+iot_classprice <- html_nodes(iot, ".current-price___2Zu51") %>% html_text()
+iot_numofpeople <- html_nodes(iot, ".footer___2mND7 div:first-child span:first-child") %>% html_text()
+iot_classlen <- html_nodes(iot, ".footer___2mND7 div:first-child span:nth-child(2)") %>% html_text()
+
+iot_classname
+iot_classprice
+iot_numofpeople
+iot_classlen

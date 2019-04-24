@@ -1,0 +1,56 @@
+#所有免費/付費課程人數：
+
+#先做免費/付費分類：
+free_ai_numofpeople <- ai_numofpeople[27:30]
+cost_ai_numofpeople <- ai_numofpeople[1:26]
+free_blockchain_numofpeople <- blockchain_numofpeople[5:21]
+cost_blockchain_numofpeople <- blockchain_numofpeople[1:4]
+free_e_commerce_numofpeople <- e_commerce_numofpeople[31:32]
+cost_e_commerce_numofpeople <- e_commerce_numofpeople[1:30]
+free_game_design_numofpeople <- game_design_numofpeople[34:35]
+cost_game_design_numofpeople <- game_design_numofpeople[1:33]
+free_digital_workforce_numofpeople <- digital_workforce_numofpeople[34:37]
+cost_digital_workforce_numofpeople <- digital_workforce_numofpeople[1:33]
+free_cloud_computing_numofpeople <- cloud_computing_numofpeople[16:20]
+cost_cloud_computing_numofpeople <- cloud_computing_numofpeople[1:15]
+free_mobile_apps_numofpeople <- mobile_apps_numofpeople[18:19]
+cost_mobile_apps_numofpeople <- mobile_apps_numofpeople[1:17]
+free_iot_numofpeople <- iot_numofpeople[5:12]
+cost_iot_numofpeople <- iot_numofpeople[1:4]
+
+#免費：
+free_all_numofpeople <- free_ai_numofpeople
+free_all_numofpeople <- append(free_all_numofpeople ,free_blockchain_numofpeople)
+free_all_numofpeople <- append(free_all_numofpeople ,free_e_commerce_numofpeople)
+free_all_numofpeople <- append(free_all_numofpeople ,free_game_design_numofpeople)
+free_all_numofpeople <- append(free_all_numofpeople ,free_digital_workforce_numofpeople)
+free_all_numofpeople <- append(free_all_numofpeople ,free_cloud_computing_numofpeople)
+free_all_numofpeople <- append(free_all_numofpeople ,free_mobile_apps_numofpeople)
+free_all_numofpeople <- append(free_all_numofpeople ,free_iot_numofpeople)
+free_all_numofpeople 
+
+#付費：
+cost_all_numofpeople <- cost_ai_numofpeople
+cost_all_numofpeople <- append(cost_all_numofpeople ,cost_blockchain_numofpeople)
+cost_all_numofpeople <- append(cost_all_numofpeople ,cost_e_commerce_numofpeople)
+cost_all_numofpeople <- append(cost_all_numofpeople ,cost_game_design_numofpeople)
+cost_all_numofpeople <- append(cost_all_numofpeople ,cost_digital_workforce_numofpeople)
+cost_all_numofpeople <- append(cost_all_numofpeople ,cost_cloud_computing_numofpeople)
+cost_all_numofpeople <- append(cost_all_numofpeople ,cost_mobile_apps_numofpeople)
+cost_all_numofpeople <- append(cost_all_numofpeople ,cost_iot_numofpeople)
+cost_all_numofpeople 
+
+免費課程人數 <- summary(free_all_numofpeople)
+付費課程人數 <- summary(cost_all_numofpeople)
+SUMMARY_all_numofpeople <-rbind(免費課程人數,付費課程人數)
+SUMMARY_all_numofpeople 
+
+boxplot(free_all_numofpeople,cost_all_numofpeople,main="免費/付費課程-人數比較", xlab="費用別",ylab="修課人數",col=rainbow(2))
+axis(side=1, las=2, at = 1:2, labels=c("免費課程","付費課程"))
+
+#免費課程人數-直方圖：
+hist_free_all_numofpeople <- hist(free_all_numofpeople,col=rainbow(7),main="免費課程-人數比較", xlab="參加人數",ylab="頻率")
+
+#付費課程人數-直方圖：
+hist_cost_all_numofpeople <- hist(cost_all_numofpeople,col=rainbow(7),main="付費課程-人數比較", xlab="參加人數",ylab="頻率")
+hist_cost_all_numofpeople <- hist(cost_all_numofpeople,col=rainbow(7),main="付費課程-人數比較", xlab="參加人數",ylab="頻率",ylim=c(0,15))

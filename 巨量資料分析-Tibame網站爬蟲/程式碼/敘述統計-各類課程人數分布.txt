@@ -1,0 +1,36 @@
+#各類課程人數分布(八個排列)
+
+#資料處理：
+ai_numofpeople <- as.numeric(gsub(",","",gsub("人","",gsub("以下","",ai_numofpeople))))
+blockchain_numofpeople <- as.numeric(gsub(",","",gsub("人","",gsub("以下","",blockchain_numofpeople))))
+e_commerce_numofpeople <- as.numeric(gsub(",","",gsub("人","",gsub("以下","",e_commerce_numofpeople))))
+game_design_numofpeople <- as.numeric(gsub(",","",gsub("人","",gsub("以下","",game_design_numofpeople))))
+digital_workforce_numofpeople <- as.numeric(gsub(",","",gsub("人","",gsub("以下","",digital_workforce_numofpeople))))
+cloud_computing_numofpeople <- as.numeric(gsub(",","",gsub("人","",gsub("以下","",cloud_computing_numofpeople))))
+mobile_apps_numofpeople <- as.numeric(gsub(",","",gsub("人","",gsub("以下","",mobile_apps_numofpeople))))
+iot_numofpeople <- as.numeric(gsub(",","",gsub("人","",gsub("以下","",iot_numofpeople))))
+
+ai_numofpeople
+blockchain_numofpeople
+e_commerce_numofpeople
+game_design_numofpeople
+digital_workforce_numofpeople
+cloud_computing_numofpeople
+mobile_apps_numofpeople
+iot_numofpeople
+
+#產生敘述統計：
+人工智慧 <- summary(ai_numofpeople)
+區塊鏈 <- summary(blockchain_numofpeople)
+數位商務 <- summary(e_commerce_numofpeople)
+遊戲設計 <- summary(game_design_numofpeople)
+科技管理 <- summary(digital_workforce_numofpeople)
+雲端技術 <- summary(cloud_computing_numofpeople)
+行動應用 <- summary(mobile_apps_numofpeople)
+物聯網 <- summary(iot_numofpeople)
+SUMMARY_numofpeople <-rbind(人工智慧,區塊鏈,數位商務,遊戲設計,科技管理,雲端技術,行動應用,物聯網)
+SUMMARY_numofpeople
+
+#畫出箱型圖：
+boxplot(ai_numofpeople,blockchain_numofpeople,e_commerce_numofpeople,game_design_numofpeople,digital_workforce_numofpeople,cloud_computing_numofpeople,mobile_apps_numofpeople,iot_numofpeople,main="各類課程-修課人數", xlab="課程類別",ylab="修課人數",col=rainbow(8))
+axis(side=1, las=2, at = 1:8, labels=c("人工智慧","區塊鏈","數位商務","遊戲設計","科技管理","雲端技術","行動應用","物聯網"))

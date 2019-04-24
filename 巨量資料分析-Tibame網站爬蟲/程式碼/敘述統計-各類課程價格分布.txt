@@ -1,0 +1,36 @@
+#各類課程價格分布(八個排列)
+
+#資料處理：
+ai_classprice <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",ai_classprice))))
+blockchain_classprice <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",blockchain_classprice))))
+e_commerce_classprice <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",e_commerce_classprice))))
+game_design_classprice <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",game_design_classprice))))
+digital_workforce_classprice <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",digital_workforce_classprice))))
+cloud_computing_classprice <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",cloud_computing_classprice))))
+mobile_apps_classprice <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",mobile_apps_classprice))))
+iot_classprice <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",iot_classprice))))
+
+ai_classprice
+blockchain_classprice
+e_commerce_classprice
+game_design_classprice
+digital_workforce_classprice
+cloud_computing_classprice
+mobile_apps_classprice
+iot_classprice
+
+#產生敘述統計：
+人工智慧 <- summary(ai_classprice)
+區塊鏈 <- summary(blockchain_classprice)
+數位商務 <- summary(e_commerce_classprice)
+遊戲設計 <- summary(game_design_classprice)
+科技管理 <- summary(digital_workforce_classprice)
+雲端技術 <- summary(cloud_computing_classprice)
+行動應用 <- summary(mobile_apps_classprice)
+物聯網 <- summary(iot_classprice)
+SUMMARY_classprice <-rbind(人工智慧,區塊鏈,數位商務,遊戲設計,科技管理,雲端技術,行動應用,物聯網)
+SUMMARY_classprice
+
+#畫出箱型圖：
+boxplot(ai_classprice,blockchain_classprice,e_commerce_classprice,game_design_classprice,digital_workforce_classprice,cloud_computing_classprice,mobile_apps_classprice,iot_classprice,main="各類課程-課程價格", xlab="課程類別",ylab="課程價格",col=rainbow(8))
+axis(side=1, las=2, at = 1:8, labels=c("人工智慧","區塊鏈","數位商務","遊戲設計","科技管理","雲端技術","行動應用","物聯網"))

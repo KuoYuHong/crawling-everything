@@ -1,0 +1,61 @@
+#各類課程總長度分布(八個排列)
+
+#資料處理：
+for(i in 1:length(ai_classlen)){
+ai_classlen[i] <- eval(parse(text = gsub("h","*60+",gsub("m","",ai_classlen[i]))))
+}
+for(i in 1:length(blockchain_classlen)){
+blockchain_classlen[i] <- eval(parse(text = gsub("h","*60+",gsub("m","",blockchain_classlen[i]))))
+}
+for(i in 1:length(e_commerce_classlen)){
+e_commerce_classlen[i] <- eval(parse(text = gsub("h","*60+",gsub("m","",e_commerce_classlen[i]))))
+}
+for(i in 1:length(game_design_classlen)){
+game_design_classlen[i] <- eval(parse(text = gsub("h","*60+",gsub("m","",game_design_classlen[i]))))
+}
+for(i in 1:length(digital_workforce_classlen)){
+digital_workforce_classlen[i] <- eval(parse(text = gsub("h","*60+",gsub("m","",digital_workforce_classlen[i]))))
+}
+for(i in 1:length(cloud_computing_classlen)){
+cloud_computing_classlen[i] <- eval(parse(text = gsub("h","*60+",gsub("m","",cloud_computing_classlen[i]))))
+}
+for(i in 1:length(mobile_apps_classlen)){
+mobile_apps_classlen[i] <- eval(parse(text = gsub("h","*60+",gsub("m","",mobile_apps_classlen[i]))))
+}
+for(i in 1:length(iot_classlen)){
+iot_classlen[i] <- eval(parse(text = gsub("h","*60+",gsub("m","",iot_classlen[i]))))
+}
+
+ai_classlen <- as.numeric(ai_classlen)
+blockchain_classlen <- as.numeric(blockchain_classlen)
+e_commerce_classlen <- as.numeric(e_commerce_classlen)
+game_design_classlen <- as.numeric(game_design_classlen)
+digital_workforce_classlen <- as.numeric(digital_workforce_classlen)
+cloud_computing_classlen <- as.numeric(cloud_computing_classlen)
+mobile_apps_classlen <- as.numeric(mobile_apps_classlen)
+iot_classlen <- as.numeric(iot_classlen)
+
+ai_classlen
+blockchain_classlen
+e_commerce_classlen
+game_design_classlen
+digital_workforce_classlen
+cloud_computing_classlen
+mobile_apps_classlen
+iot_classlen
+
+#產生敘述統計：
+人工智慧 <- summary(ai_classlen)
+區塊鏈 <- summary(blockchain_classlen)
+數位商務 <- summary(e_commerce_classlen)
+遊戲設計 <- summary(game_design_classlen)
+科技管理 <- summary(digital_workforce_classlen)
+雲端技術 <- summary(cloud_computing_classlen)
+行動應用 <- summary(mobile_apps_classlen)
+物聯網 <- summary(iot_classlen)
+SUMMARY_classlen <-rbind(人工智慧,區塊鏈,數位商務,遊戲設計,科技管理,雲端技術,行動應用,物聯網)
+SUMMARY_classlen
+
+#畫出箱型圖：
+boxplot(ai_classlen,blockchain_classlen,e_commerce_classlen,game_design_classlen,digital_workforce_classlen,cloud_computing_classlen,mobile_apps_classlen,iot_classlen,main="各類課程-課程總長度", xlab="課程類別",ylab="課程總長度",col=rainbow(8))
+axis(side=1, las=2, at = 1:8, labels=c("人工智慧","區塊鏈","數位商務","遊戲設計","科技管理","雲端技術","行動應用","物聯網"))

@@ -1,0 +1,56 @@
+#所有免費/付費課程總長度：
+
+#先做免費/付費分類：
+free_ai_classlen <- ai_classlen[27:30]
+cost_ai_classlen <- ai_classlen[1:26]
+free_blockchain_classlen <- blockchain_classlen[5:21]
+cost_blockchain_classlen <- blockchain_classlen[1:4]
+free_e_commerce_classlen <- e_commerce_classlen[31:32]
+cost_e_commerce_classlen <- e_commerce_classlen[1:30]
+free_game_design_classlen <- game_design_classlen[34:35]
+cost_game_design_classlen <- game_design_classlen[1:33]
+free_digital_workforce_classlen <- digital_workforce_classlen[34:37]
+cost_digital_workforce_classlen <- digital_workforce_classlen[1:33]
+free_cloud_computing_classlen <- cloud_computing_classlen[16:20]
+cost_cloud_computing_classlen <- cloud_computing_classlen[1:15]
+free_mobile_apps_classlen <- mobile_apps_classlen[18:19]
+cost_mobile_apps_classlen <- mobile_apps_classlen[1:17]
+free_iot_classlen <- iot_classlen[5:12]
+cost_iot_classlen <- iot_classlen[1:4]
+
+#免費：
+free_all_classlen <- free_ai_classlen
+free_all_classlen <- append(free_all_classlen ,free_blockchain_classlen)
+free_all_classlen <- append(free_all_classlen ,free_e_commerce_classlen)
+free_all_classlen <- append(free_all_classlen ,free_game_design_classlen)
+free_all_classlen <- append(free_all_classlen ,free_digital_workforce_classlen)
+free_all_classlen <- append(free_all_classlen ,free_cloud_computing_classlen)
+free_all_classlen <- append(free_all_classlen ,free_mobile_apps_classlen)
+free_all_classlen <- append(free_all_classlen ,free_iot_classlen)
+free_all_classlen 
+
+#付費：
+cost_all_classlen <- cost_ai_classlen
+cost_all_classlen <- append(cost_all_classlen ,cost_blockchain_classlen)
+cost_all_classlen <- append(cost_all_classlen ,cost_e_commerce_classlen)
+cost_all_classlen <- append(cost_all_classlen ,cost_game_design_classlen)
+cost_all_classlen <- append(cost_all_classlen ,cost_digital_workforce_classlen)
+cost_all_classlen <- append(cost_all_classlen ,cost_cloud_computing_classlen)
+cost_all_classlen <- append(cost_all_classlen ,cost_mobile_apps_classlen)
+cost_all_classlen <- append(cost_all_classlen ,cost_iot_classlen)
+cost_all_classlen 
+
+免費課程總長度 <- summary(free_all_classlen)
+付費課程總長度 <- summary(cost_all_classlen)
+SUMMARY_all_classlen <-rbind(免費課程總長度,付費課程總長度)
+SUMMARY_all_classlen 
+
+boxplot(free_all_classlen,cost_all_classlen,main="免費/付費課程-課程總長度比較", xlab="費用別",ylab="課程總長度",col=rainbow(2))
+axis(side=1, las=2, at = 1:2, labels=c("免費課程","付費課程"))
+
+#免費課程總長度-直方圖：
+hist_free_all_classlen <- hist(free_all_classlen,col=rainbow(7),main="免費課程-總長度比較", xlab="課程總長度",ylab="頻率")
+
+#付費課程總長度-直方圖：
+hist_cost_all_classlen <- hist(cost_all_classlen,col=rainbow(7),main="付費課程-總長度比較", xlab="課程總長度",ylab="頻率")
+hist_cost_all_classlen <- hist(cost_all_classlen,col=rainbow(7),main="付費課程-總長度比較", xlab="課程總長度",ylab="頻率",ylim=c(0,25))
