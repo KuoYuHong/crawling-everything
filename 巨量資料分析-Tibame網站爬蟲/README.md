@@ -38,7 +38,7 @@
 
 * 人工智慧課程總長度是所有類當中最長，**平均將近15小時**，可能範圍較廣需要較多時間來學會
 
-### PDF：
-**詳細的圖表與說明**
-{%pdf https://drive.google.com/file/d/1dFxV3ym-kBd0lOelZ1di6Ep0QXsKzGbQ/view?usp=sharing %}
+### 不足的地方：
+>針對這次完成的作業，覺得說...
+
 
