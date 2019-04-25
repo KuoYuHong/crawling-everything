@@ -1,7 +1,7 @@
 # 巨量資料分析-Tibame網站爬蟲 (取自2019/4/1網頁資料)
 [TibaMe線上課程網站](https://www.tibame.com/courselibrary)
 
-:point_right:針對線上課程網站去做分析，思考哪些因素可能影響到課程熱門程度，進而影響未來課程的規畫
+:point_right: 針對線上課程網站去做分析，思考哪些因素可能影響到課程熱門程度、課程趨勢，進而影響未來課程的規畫
 
 ### 課程類別：
 * 人工智慧
@@ -40,5 +40,12 @@
 
 ### 不足的地方：
 >針對這次完成的作業，覺得說...
+* 透過爬蟲有找出當下最熱門課程，後續對這些課程能夠進行什麼深度分析？
+* 這次只抓取單一時間點去做分析，沒有過去歷史紀錄或是熱門課程開課狀況，無法掌握最有潛力的課程和進行預測後續發展
 
-
+graph Analysis & Visualization;
+    Form questions-->explore(敘述統計);
+    explore(敘述統計)-->Hypothesis(假設);
+    Hypothesis(假設)-->Validate(Testing data);
+    Validate(Testing data)-->Analysis Result;
+    Analysis Result-->Form questions;
