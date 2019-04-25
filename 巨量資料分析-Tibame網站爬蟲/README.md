@@ -45,4 +45,10 @@
 
 ### Analysis & Visualization：
 
-![Analysis & Visualization-1](https://github.com/KuoYuHong/crawling-everything/blob/master/%E5%B7%A8%E9%87%8F%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90-Tibame%E7%B6%B2%E7%AB%99%E7%88%AC%E8%9F%B2/%E5%9C%96%E7%89%87/Analysis%20%26%20Visualization-1.png)  
+>資料分析與視覺化流程
+
+![Analysis & Visualization-1](https://github.com/KuoYuHong/crawling-everything/blob/master/%E5%B7%A8%E9%87%8F%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90-Tibame%E7%B6%B2%E7%AB%99%E7%88%AC%E8%9F%B2/%E5%9C%96%E7%89%87/Analysis%20%26%20Visualization-1.png)
+
+![Analysis & Visualization-2](https://github.com/KuoYuHong/crawling-everything/blob/master/%E5%B7%A8%E9%87%8F%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90-Tibame%E7%B6%B2%E7%AB%99%E7%88%AC%E8%9F%B2/%E5%9C%96%E7%89%87/Analysis%20%26%20Visualization-2.png)
+
+#### Flowchart Create by [Mermaid Live Editor](https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbkFbQ2hyaXN0bWFzXSAtLT58R2V0IG1vbmV5fCBCKEdvIHNob3BwaW5nKVxuQiAtLT4gQ3tMZXQgbWUgdGhpbmt9XG5DIC0tPnxPbmV8IERbTGFwdG9wXVxuQyAtLT58VHdvfCBFW2lQaG9uZV1cbkMgLS0-fFRocmVlfCBGW2ZhOmZhLWNhciBDYXJdXG4iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ) Website
