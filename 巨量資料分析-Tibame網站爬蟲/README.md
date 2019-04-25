@@ -44,11 +44,5 @@
 * 這次只抓取單一時間點去做分析，沒有過去歷史紀錄或是熱門課程開課狀況，無法掌握最有潛力的課程和進行預測後續發展
 
 ### Analysis & Visualization：
-```
-graph Analysis & Visualization;
-    Form questions-->explore(敘述統計);
-    explore(敘述統計)-->Hypothesis(假設);
-    Hypothesis(假設)-->Validate(Testing data);
-    Validate(Testing data)-->Analysis Result;
-    Analysis Result-->Form questions;
-```
+
+![Analysis & Visualization-1](https://github.com/KuoYuHong/crawling-everything/blob/master/%E5%B7%A8%E9%87%8F%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90-Tibame%E7%B6%B2%E7%AB%99%E7%88%AC%E8%9F%B2/%E5%9C%96%E7%89%87/Analysis%20%26%20Visualization-1.png)  
