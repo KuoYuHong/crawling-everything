@@ -43,9 +43,12 @@
 * 透過爬蟲有找出當下最熱門課程，後續對這些課程能夠進行什麼深度分析？
 * 這次只抓取單一時間點去做分析，沒有過去歷史紀錄或是熱門課程開課狀況，無法掌握最有潛力的課程和進行預測後續發展
 
+### Analysis & Visualization：
+```
 graph Analysis & Visualization;
     Form questions-->explore(敘述統計);
     explore(敘述統計)-->Hypothesis(假設);
     Hypothesis(假設)-->Validate(Testing data);
     Validate(Testing data)-->Analysis Result;
     Analysis Result-->Form questions;
+```
