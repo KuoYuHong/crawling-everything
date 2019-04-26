@@ -1,0 +1,30 @@
+#單一課程價格分布：
+
+#要先進行資料處理再使用下面：
+ai_classprice <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",ai_classprice))))
+blockchain_classprice <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",blockchain_classprice))))
+e_commerce_classprice <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",e_commerce_classprice))))
+game_design_classprice <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",game_design_classprice))))
+digital_workforce_classprice <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",digital_workforce_classprice))))
+cloud_computing_classprice <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",cloud_computing_classprice))))
+mobile_apps_classprice <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",mobile_apps_classprice))))
+iot_classprice <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",iot_classprice))))
+
+ai_classprice
+blockchain_classprice
+e_commerce_classprice
+game_design_classprice
+digital_workforce_classprice
+cloud_computing_classprice
+mobile_apps_classprice
+iot_classprice
+
+#畫出直方圖
+hist_ai_classprice <- hist(ai_classprice,col=rainbow(7),main="人工智慧-課程價格分布", xlab="價格",ylab="頻率")
+hist_blockchain_classprice <- hist(blockchain_classprice,col=rainbow(7),main="區塊鏈-課程價格分布", xlab="價格",ylab="頻率")
+hist_e_commerce_classprice <- hist(e_commerce_classprice,col=rainbow(7),main="數位商務-課程價格分布", xlab="價格",ylab="頻率")
+hist_game_design_classprice <- hist(game_design_classprice,col=rainbow(7),main="遊戲設計-課程價格分布", xlab="價格",ylab="頻率")
+hist_digital_workforce_classprice <- hist(digital_workforce_classprice,col=rainbow(7),main="科技管理-課程價格分布", xlab="價格",ylab="頻率")
+hist_cloud_computing_classprice <- hist(cloud_computing_classprice,col=rainbow(7),main="雲端技術-課程價格分布", xlab="價格",ylab="頻率")
+hist_mobile_apps_classprice <- hist(mobile_apps_classprice,col=rainbow(7),main="行動應用-課程價格分布", xlab="價格",ylab="頻率")
+hist_iot_classprice <- hist(iot_classprice,col=rainbow(7),main="物聯網-課程價格分布", xlab="價格",ylab="頻率")

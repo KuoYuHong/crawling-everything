@@ -1,0 +1,115 @@
+#單一課程在不同人數區間下的價格分布：
+
+#要先進行資料處理再使用下面：
+ai_numofpeople <- as.numeric(gsub(",","",gsub("人","",gsub("以下","",ai_numofpeople))))
+blockchain_numofpeople <- as.numeric(gsub(",","",gsub("人","",gsub("以下","",blockchain_numofpeople))))
+e_commerce_numofpeople <- as.numeric(gsub(",","",gsub("人","",gsub("以下","",e_commerce_numofpeople))))
+game_design_numofpeople <- as.numeric(gsub(",","",gsub("人","",gsub("以下","",game_design_numofpeople))))
+digital_workforce_numofpeople <- as.numeric(gsub(",","",gsub("人","",gsub("以下","",digital_workforce_numofpeople))))
+cloud_computing_numofpeople <- as.numeric(gsub(",","",gsub("人","",gsub("以下","",cloud_computing_numofpeople))))
+mobile_apps_numofpeople <- as.numeric(gsub(",","",gsub("人","",gsub("以下","",mobile_apps_numofpeople))))
+iot_numofpeople <- as.numeric(gsub(",","",gsub("人","",gsub("以下","",iot_numofpeople))))
+
+ai_numofpeople
+blockchain_numofpeople
+e_commerce_numofpeople
+game_design_numofpeople
+digital_workforce_numofpeople
+cloud_computing_numofpeople
+mobile_apps_numofpeople
+iot_numofpeople
+
+---
+#人工智慧：
+
+ai_numofpeople_1 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",ai_classprice[which(ai_numofpeople<=30)]))))
+ai_numofpeople_2 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",ai_classprice[which(ai_numofpeople>30 & ai_numofpeople<=100)]))))
+ai_numofpeople_3 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",ai_classprice[which(ai_numofpeople>100 & ai_numofpeople<=500)]))))
+ai_numofpeople_4 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",ai_classprice[which(ai_numofpeople>500 & ai_numofpeople<=1000)]))))
+ai_numofpeople_5 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",ai_classprice[which(ai_numofpeople>1000)]))))
+
+boxplot(ai_numofpeople_1,ai_numofpeople_2,ai_numofpeople_3,ai_numofpeople_4,ai_numofpeople_5,main="人工智慧-修課人數與課程價格關係圖", xlab="修課          人數",ylab="課程價錢",col=rainbow(5))
+axis(side=1, las=2, at = 1:5, labels=c("0~30","31~100","101~500","501~1000","1000以上"))
+
+---
+#區塊鏈：
+
+blockchain_numofpeople_1 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",blockchain_classprice[which(blockchain_numofpeople<=30)]))))
+blockchain_numofpeople_2 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",blockchain_classprice[which(blockchain_numofpeople>30 & blockchain_numofpeople<=100)]))))
+blockchain_numofpeople_3 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",blockchain_classprice[which(blockchain_numofpeople>100 & blockchain_numofpeople<=500)]))))
+blockchain_numofpeople_4 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",blockchain_classprice[which(blockchain_numofpeople>500 & blockchain_numofpeople<=1000)]))))
+blockchain_numofpeople_5 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",blockchain_classprice[which(blockchain_numofpeople>1000)]))))
+
+boxplot(blockchain_numofpeople_1,blockchain_numofpeople_2,blockchain_numofpeople_3,blockchain_numofpeople_4,blockchain_numofpeople_5,main="區塊鏈-修課人數與課程價格關係圖", xlab="修課          人數",ylab="課程價錢",col=rainbow(5))
+axis(side=1, las=2, at = 1:5, labels=c("0~30","31~100","101~500","501~1000","1000以上"))
+
+---
+#數位商務：
+
+e_commerce_numofpeople_1 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",e_commerce_classprice[which(e_commerce_numofpeople<=30)]))))
+e_commerce_numofpeople_2 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",e_commerce_classprice[which(e_commerce_numofpeople>30 & e_commerce_numofpeople<=100)]))))
+e_commerce_numofpeople_3 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",e_commerce_classprice[which(e_commerce_numofpeople>100 & e_commerce_numofpeople<=500)]))))
+e_commerce_numofpeople_4 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",e_commerce_classprice[which(e_commerce_numofpeople>500 & e_commerce_numofpeople<=1000)]))))
+e_commerce_numofpeople_5 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",e_commerce_classprice[which(e_commerce_numofpeople>1000)]))))
+
+boxplot(e_commerce_numofpeople_1,e_commerce_numofpeople_2,e_commerce_numofpeople_3,e_commerce_numofpeople_4,e_commerce_numofpeople_5,main="數位商務-修課人數與課程價格關係圖", xlab="修課          人數",ylab="課程價錢",col=rainbow(5))
+axis(side=1, las=2, at = 1:5, labels=c("0~30","31~100","101~500","501~1000","1000以上"))
+
+---
+#遊戲設計：
+
+game_design_numofpeople_1 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",game_design_classprice[which(game_design_numofpeople<=30)]))))
+game_design_numofpeople_2 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",game_design_classprice[which(game_design_numofpeople>30 & game_design_numofpeople<=100)]))))
+game_design_numofpeople_3 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",game_design_classprice[which(game_design_numofpeople>100 & game_design_numofpeople<=500)]))))
+game_design_numofpeople_4 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",game_design_classprice[which(game_design_numofpeople>500 & game_design_numofpeople<=1000)]))))
+game_design_numofpeople_5 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",game_design_classprice[which(game_design_numofpeople>1000)]))))
+
+boxplot(game_design_numofpeople_1,game_design_numofpeople_2,game_design_numofpeople_3,game_design_numofpeople_4,game_design_numofpeople_5,main="遊戲設計-修課人數與課程價格關係圖", xlab="修課          人數",ylab="課程價錢",col=rainbow(5))
+axis(side=1, las=2, at = 1:5, labels=c("0~30","31~100","101~500","501~1000","1000以上"))
+
+---
+#科技管理：
+digital_workforce_numofpeople_1 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",digital_workforce_classprice[which(digital_workforce_numofpeople<=30)]))))
+digital_workforce_numofpeople_2 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",digital_workforce_classprice[which(digital_workforce_numofpeople>30 & digital_workforce_numofpeople<=100)]))))
+digital_workforce_numofpeople_3 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",digital_workforce_classprice[which(digital_workforce_numofpeople>100 & digital_workforce_numofpeople<=500)]))))
+digital_workforce_numofpeople_4 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",digital_workforce_classprice[which(digital_workforce_numofpeople>500 & digital_workforce_numofpeople<=1000)]))))
+digital_workforce_numofpeople_5 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",digital_workforce_classprice[which(digital_workforce_numofpeople>1000)]))))
+
+boxplot(digital_workforce_numofpeople_1,digital_workforce_numofpeople_2,digital_workforce_numofpeople_3,digital_workforce_numofpeople_4,digital_workforce_numofpeople_5,main="科技管理-修課人數與課程價格關係圖", xlab="修課          人數",ylab="課程價錢",col=rainbow(5))
+axis(side=1, las=2, at = 1:5, labels=c("0~30","31~100","101~500","501~1000","1000以上"))
+
+---
+#雲端技術：
+
+cloud_computing_numofpeople_1 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",cloud_computing_classprice[which(cloud_computing_numofpeople<=30)]))))
+cloud_computing_numofpeople_2 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",cloud_computing_classprice[which(cloud_computing_numofpeople>30 & cloud_computing_numofpeople<=100)]))))
+cloud_computing_numofpeople_3 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",cloud_computing_classprice[which(cloud_computing_numofpeople>100 & cloud_computing_numofpeople<=500)]))))
+cloud_computing_numofpeople_4 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",cloud_computing_classprice[which(cloud_computing_numofpeople>500 & cloud_computing_numofpeople<=1000)]))))
+cloud_computing_numofpeople_5 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",cloud_computing_classprice[which(cloud_computing_numofpeople>1000)]))))
+
+boxplot(cloud_computing_numofpeople_1,cloud_computing_numofpeople_2,cloud_computing_numofpeople_3,cloud_computing_numofpeople_4,cloud_computing_numofpeople_5,main="雲端技術-修課人數與課程價格關係圖", xlab="修課          人數",ylab="課程價錢",col=rainbow(5))
+axis(side=1, las=2, at = 1:5, labels=c("0~30","31~100","101~500","501~1000","1000以上"))
+
+---
+#行動應用：
+
+mobile_apps_numofpeople_1 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",mobile_apps_classprice[which(mobile_apps_numofpeople<=30)]))))
+mobile_apps_numofpeople_2 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",mobile_apps_classprice[which(mobile_apps_numofpeople>30 & mobile_apps_numofpeople<=100)]))))
+mobile_apps_numofpeople_3 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",mobile_apps_classprice[which(mobile_apps_numofpeople>100 & mobile_apps_numofpeople<=500)]))))
+mobile_apps_numofpeople_4 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",mobile_apps_classprice[which(mobile_apps_numofpeople>500 & mobile_apps_numofpeople<=1000)]))))
+mobile_apps_numofpeople_5 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",mobile_apps_classprice[which(mobile_apps_numofpeople>1000)]))))
+
+boxplot(mobile_apps_numofpeople_1,mobile_apps_numofpeople_2,mobile_apps_numofpeople_3,mobile_apps_numofpeople_4,mobile_apps_numofpeople_5,main="行動應用-修課人數與課程價格關係圖", xlab="修課          人數",ylab="課程價錢",col=rainbow(5))
+axis(side=1, las=2, at = 1:5, labels=c("0~30","31~100","101~500","501~1000","1000以上"))
+
+---
+#物聯網：
+
+iot_numofpeople_1 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",iot_classprice[which(iot_numofpeople<=30)]))))
+iot_numofpeople_2 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",iot_classprice[which(iot_numofpeople>30 & iot_numofpeople<=100)]))))
+iot_numofpeople_3 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",iot_classprice[which(iot_numofpeople>100 & iot_numofpeople<=500)]))))
+iot_numofpeople_4 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",iot_classprice[which(iot_numofpeople>500 & iot_numofpeople<=1000)]))))
+iot_numofpeople_5 <- as.numeric(gsub(",","",gsub("NT\\$","",gsub("免費","0",iot_classprice[which(iot_numofpeople>1000)]))))
+
+boxplot(iot_numofpeople_1,iot_numofpeople_2,iot_numofpeople_3,iot_numofpeople_4,iot_numofpeople_5,main="物聯網-修課人數與課程價格關係圖", xlab="修課          人數",ylab="課程價錢",col=rainbow(5))
+axis(side=1, las=2, at = 1:5, labels=c("0~30","31~100","101~500","501~1000","1000以上"))
